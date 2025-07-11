@@ -1,0 +1,87 @@
+container
+.impact {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.impact h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+
+.impact-scroll-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+.impact-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* === Single stat card === */
+.impact-stat {
+  flex: 0 0 auto;              
+  width: 250px;
+  min-width: 250px;
+  background-color: #0047ab;
+  color: #fff;
+  padding: 40px 20px;
+  border-radius: 12px;         
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.impact-stat h3 {
+  font-size: 2rem;
+  margin: 0 0 10px;
+  font-weight: bold;
+}
+
+.impact-stat p {
+  font-size: 1.1rem;
+  margin: 0;
+  opacity: 0.95;
+}
+
+
+@media (max-width: 768px) {
+  .impact h2 {
+    font-size: 1.8rem;
+  }
+
+  .impact-scroll-wrapper {
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .impact-scroll-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .impact-stats {
+    flex-wrap: nowrap;          
+    min-width: max-content;   
+  }
+
+  .impact-stat {
+    width: 200px;              
+    min-width: 200px;
+    flex: 0 0 auto;
+  }
+
+  .impact-stat h3 {
+    font-size: 1.5rem;
+  }
+
+  .impact-stat p {
+    font-size: 1rem;
+  }
+}

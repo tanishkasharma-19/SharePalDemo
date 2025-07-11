@@ -1,0 +1,100 @@
+.sharepal-promise {
+  background-color: #031C58;
+  color: #fff;
+  padding: 40px 15px;
+  border-radius: 0;
+  text-align: center;
+}
+
+.promise-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.promise-header h3 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.promise-header span {
+  color: #A0F52D;
+}
+
+
+.promise-scroll-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+.promise-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.promise-item {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 15px;
+  flex: 1 1 200px;
+  max-width: 200px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.promise-item h4 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.promise-item p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+
+@media (max-width: 768px) {
+  .promise-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .promise-header h3 {
+    font-size: 1.5rem;
+  }
+
+  .promise-items {
+    flex-wrap: nowrap;
+    min-width: max-content;
+    gap: 20px;
+  }
+
+  .promise-scroll-wrapper {
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .promise-scroll-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+
+  .promise-item {
+    flex: 0 0 auto;
+    width: 180px;
+    min-width: 180px;
+    border-radius: 10px; /* ✅ still round corners on cards */
+  }
+
+  .promise-item h4 {
+    font-size: 1.1rem;
+  }
+
+  .promise-item p {
+    font-size: 0.9rem;
+  }
+}

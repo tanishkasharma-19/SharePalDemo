@@ -1,0 +1,50 @@
+container 
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+  background: white;
+  color: #004aad;
+}
+
+.site-header .logo {
+  width: 200px;
+  height: auto;
+  margin-right: 40px;
+}
+
+.site-header h1 {
+  color: #004aad;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.site-header .highlight {
+  color: orange;
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .site-header .logo {
+    width: 150px;
+    margin: 0 0 10px;
+  }
+
+  .site-header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .site-header h1 {
+    font-size: 1.2rem;
+  }
+}
