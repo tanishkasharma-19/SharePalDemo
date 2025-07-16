@@ -1,39 +1,81 @@
+/* ===== HERO WRAPPER ===== */
 .hero {
+  position: relative;
   text-align: center;
-  padding: 40px;
-  margin-top: 50px;
+  overflow: hidden;
 }
 
-.hero h2 {
+/* ===== CONTENT ===== */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h2 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.hero-content .hello {
+  color: #0055FF;
+  font-weight: bold;
+}
+
+.hero-content .pal {
+  color: #FFC107;
+  font-weight: bold;
+}
+
+.hero-content h1 {
   font-size: 50px;
-  margin-bottom: 10px;
+  line-height: 1.2;
+  margin: 20px 0;
+  font-weight: 600; /* less bold for cleaner look */
 }
 
-.hero p {
-  font-size: 20px;
-  color: #333;
-  font-style: italic;
+.own-experience,
+.rent-gear {
+  display: inline-block;
+  white-space: nowrap;
 }
 
-@media (max-width: 768px) {
-  .hero {
-    padding: 20px;
-  }
-
-  .hero h2 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
+.hero-content .highlight {
+  background-color: #A8FF00;
+  border-radius: 5px;
+  padding: 0 5px;
 }
-@media (max-width: 480px) {
-  .hero h2 {
-    font-size: 1.5rem;
+
+/* ===== TAGLINES ===== */
+.taglines {
+  display: flex;
+  flex-wrap: nowrap; /* stay side by side always */
+  justify-content: center;
+  align-items: center;
+  gap: 12px; /* smaller space between buttons */
+  margin-top: 20px;
+}
+
+.tagline {
+  background: #f5f5f5;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-weight: 600; /* bold text */
+  display: inline-flex;
+  align-items: center;
+}
+
+.tagline .bold {
+  font-weight: 700;
+  color: blue;
+}
+
+/* ===== RESPONSIVE TWEAKS ===== */
+@media (max-width: 500px) {
+  .hero-content h1 {
+    font-size: 36px;
   }
 
-  .hero p {
-    font-size: 0.9rem;
+  .taglines {
+    flex-wrap: wrap; /* only wrap if screen is super narrow */
   }
 }

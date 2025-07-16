@@ -1,0 +1,57 @@
+.last-impact {
+  background: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  overflow-x: auto;  /* enable horizontal scrolling */
+}
+
+.impact-wrapper {
+  display: flex;
+  flex-wrap: nowrap;   /* NEVER wrap! */
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 100%;     /* allow full scrollable width */
+  min-width: 600px;    /* optional: minimum width for 3 items */
+}
+
+.impact-item {
+  flex: 0 0 auto;      /* prevent shrinking */
+  text-align: center;
+}
+
+.impact-item h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0033cc;
+  margin: 0;
+}
+
+.impact-item h2 span {
+  color: #55a630;
+  font-weight: 700;
+}
+
+.impact-item p {
+  margin-top: 8px;
+  font-size: 1rem;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .impact-item h2 {
+    font-size: 2rem;
+  }
+  .impact-item p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .impact-wrapper {
+    gap: 20px; /* tighter on mobile */
+  }
+  .impact-item {
+    min-width: 140px; /* ensures enough space to stay horizontal */
+  }
+}

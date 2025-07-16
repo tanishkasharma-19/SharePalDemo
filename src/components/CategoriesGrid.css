@@ -1,0 +1,102 @@
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem 4rem; 
+  margin-top: 2rem; 
+}
+
+.category-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 320px; 
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+}
+
+.category-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.category-card p {
+  font-size: 1rem;
+  flex-grow: 1;
+  transition: color 0.3s ease;
+}
+
+.category-card.photography:hover {
+  background: #f9532d;
+  color: #fff;
+}
+
+.category-card.gaming:hover {
+  background: #7f35fc;
+  color: #fff;
+}
+
+.category-card.outdoor:hover {
+  background: #2e8734;
+  color: #fff;
+}
+
+.category-card.entertainment:hover {
+  background: #fa2d58;
+  color: #fff;
+}
+
+.category-card:hover h3,
+.category-card:hover p {
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .categories-grid {
+    padding: 1.5rem 2rem;
+    gap: 1.5rem;
+  }
+
+  .category-card {
+    height: 300px;
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .categories-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    padding: 1rem 1rem;
+  }
+
+  .category-card {
+    height: 280px;
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .categories-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 1rem;
+    margin-top: 1rem;
+    padding: 1rem 1rem 1rem 0;
+  }
+
+  .category-card {
+    flex: 0 0 auto;
+    min-width: 220px;
+    height: 260px;
+  }
+}

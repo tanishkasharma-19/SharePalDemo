@@ -1,9 +1,8 @@
-container 
 .zero-policy {
   text-align: center;
   padding: 60px 20px;
   background: #f9f9f9;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .zero-policy h2 {
@@ -16,36 +15,40 @@ container
   color: purple;
 }
 
-
 .policy-scroll-wrapper {
-  overflow-x: auto;                  
-  -webkit-overflow-scrolling: touch; 
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   width: 100%;
 }
 
 .policy-scroll-wrapper::-webkit-scrollbar {
-  display: none;  
+  display: none;
 }
-
 
 .policy-items {
   display: flex;
-  flex-wrap: wrap;  
+  flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
 }
-
 
 .policy-item {
   background: #fff;
   border-radius: 25px;
   padding: 30px 20px;
-  width: 300px;  /* desktop card size */
+  width: 300px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.policy-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
 }
 
 .policy-item h3 {
@@ -69,21 +72,20 @@ container
   margin: 0 auto;
 }
 
-
 @media (max-width: 768px) {
   .zero-policy h2 {
     font-size: 1.5rem;
   }
 
   .policy-items {
-    flex-wrap: nowrap;          
-    min-width: max-content;    
+    flex-wrap: nowrap;
+    min-width: max-content;
     gap: 20px;
   }
 
   .policy-item {
-    flex: 0 0 auto;             
-    width: 220px;               
+    flex: 0 0 auto;
+    width: 220px;
     min-width: 220px;
   }
 

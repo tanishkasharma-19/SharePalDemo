@@ -1,0 +1,98 @@
+.site-footer {
+  background: #020d37;
+  color: #fff;
+  padding: 60px 20px;
+}
+
+.footer-columns {
+  display: flex;
+  flex-wrap: wrap;  /* allows wrapping on smaller screens */
+  justify-content: center;  /* center all items horizontally */
+  align-items: flex-start;  /* align tops of columns */
+  max-width: 1200px;
+  margin: 0 auto 40px auto;
+  gap: 50px;  /* consistent spacing between columns */
+}
+
+.footer-col {
+  flex: 1 1 200px; /* flex grow, shrink, basis */
+  min-width: 180px; /* ensures columns stay wide enough */
+  max-width: 250px; /* prevents one column from growing too much */
+}
+
+.footer-col h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #fff;
+  display: inline-block;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* ✅ Medium screens (tablet) - 2 or 3 columns per row */
+@media (max-width: 1024px) {
+  .footer-columns {
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .footer-col {
+    flex: 1 1 40%; /* about 2 per row */
+    max-width: 300px;
+    text-align: left;
+  }
+}
+
+/* ✅ Small screens - keep side-by-side if space, otherwise 1 per row */
+@media (max-width: 768px) {
+  .footer-columns {
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .footer-col {
+    flex: 1 1 45%;
+    text-align: center; /* optional: center items for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-columns {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .footer-col {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .footer-col h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .footer-col ul li {
+    font-size: 0.85rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+  }
+}
